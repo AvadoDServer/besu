@@ -1,0 +1,24 @@
+version: '3.4'
+services:
+  besu.avado.dnp.dappnode.eth:
+    image: 'besu.avado.dnp.dappnode.eth:0.0.1'
+    build:
+      context: ./build
+      args:
+        BESU_VERSION: 22.7.0
+    volumes:
+      - 'data:/data'
+    environment:
+      - JAVA_OPTS=-Xmx4g
+      - EXTRA_OPTS=
+    ports:
+      - '443:443'
+      - '8545:8545'
+      - '8546:8546'
+      - '8547:8547'
+      - '8550:8550'
+      - '8551:8551'
+      - '30303:30303'
+      - '30303:30303/udp'
+volumes:
+  data: {}

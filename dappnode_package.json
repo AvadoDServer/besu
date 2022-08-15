@@ -1,0 +1,33 @@
+{
+  "name": "besu.avado.dnp.dappnode.eth",
+  "version": "0.0.1",
+  "upstream": "22.7.0",
+  "autoupdate": true,
+  "title": "Ethereum node (Besu + mainnet)",
+  "description": "Ethereum Client - based on Besu",
+  "avatar": "/ipfs/QmXBFgAP7v8T77hMtJoxtqHWRkds1wwkSyUUyCJSn25KcC",
+  "type": "library",
+  "chain": "ethereum",
+  "image": {
+    "restart": "always",
+    "ports": [
+      "30303:30303",
+      "30303:30303/udp"
+    ],
+    "volumes": [
+      "data:/data"
+    ],
+    "environment": [
+      "JAVA_OPTS=-Xmx4g",
+      "EXTRA_OPTS="
+    ]
+  },
+  "author": "AVADO",
+  "license": "(C)",
+  "links": {
+    "RPC endpoint": "http://besu.my.ava.do:8545",
+    "RPC endpoint (SSL)": "https://besu.my.ava.do",
+    "WS endpoint": "ws://besu.my.ava.do:8546",
+    "EE endpoint (http)": "http://besu.my.ava.do:8551"
+  }
+}
